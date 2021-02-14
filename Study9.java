@@ -25,6 +25,37 @@ public class Study9 {
 			}
 			System.out.println("");
 		}
+		
+		System.out.println("");
+		System.out.println("");
+		
+		int h = 4;
+		for (int i = h; i > 0; i = i-1) {
+			for(int a = i; a > 0; a = a-1) {
+				System.out.print("□　");
+			}
+			
+			for(int b = 1; b < 4; b++) {
+				System.out.print("■　");
+			}
+
+			for(int c = i; c > 0; c = c-1) {
+				System.out.print("□　");
+			}
+			
+			System.out.println("");
+		}
+		
+		for (int i = 1; i < 10; i++) {
+			System.out.print("■　");
+		}
+		System.out.println("");
+		
+		
+		
+		
 	}
+	
+
 }
 
