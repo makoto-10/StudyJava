@@ -35,7 +35,8 @@ public class Study9 {
 				System.out.print("Å†Å@");
 			}
 			
-			for(int b = 1; b < 4; b++) {
+			int b = 5;
+			for(int a = b - i; a < 8; a = a + 2) {
 				System.out.print("Å°Å@");
 			}
 
