@@ -11,7 +11,7 @@ public class Study11 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//画面表示
+		
 		System.out.println("◆High&Lowゲーム◆");
 		System.out.println();
 		System.out.println("～ルール～");
@@ -27,6 +27,7 @@ public class Study11 {
 		int num1 = rand1.nextInt(11);
 		System.out.println("Aの数字：" + "『" + num1 + "』");
 		Scanner scan = new Scanner(System.in);
+		
 		int num2;
 		int num3;
 		int num4;
@@ -43,12 +44,9 @@ public class Study11 {
 			}else {
 				break;
 			}
-			
-			
 		}
 		
 		num4 = num1 + num3;
-		
 		
 		if (num4 >= 11 && num2 == 1) {
 			System.out.println("Bの数字は『" + num3 + "です");
@@ -65,10 +63,6 @@ public class Study11 {
 			System.out.println("合計結果は『" + num4 + "』です");
 			System.out.println("あなたが選んだのは『" + num2 + "』です");
 			System.out.println("『はずれ』です。");
-		}
-		
+		}	
 	}
-	
-	
-
 }
