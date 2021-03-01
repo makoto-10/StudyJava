@@ -18,28 +18,32 @@ public class Study13 {
 		System.out.println("どちらかが3回勝つまで行います。");
 		System.out.println("3回連続で勝ったらおみくじを引けます。");
 		
-		int count = 1;
+		String[] hand = {"パー","グー","チョキ"};
 		
 		while(true) {
-			String[] hand = {"パー","グー","チョキ"};
-			String hands = hand[rand.nextInt(2)];
-			String hands2 = hand[rand.nextInt(2)];
 			int input = scan.nextInt();
+			String inputtext = hand[input];
+			int enemy = rand.nextInt(3);
+			String enemytext = hand[enemy];
+			System.out.println("あなたが出したのは" + inputtext + "です。");	
+			System.out.println("相手が出したのは" + enemytext + "です。");
 			
-			count ++;
 			
-			if(hands2 == hands) {
-				System.out.println("あなたの手は" + hands + "です");
-				System.out.println();
-				System.out.println("相手の手は" + hands2 + "です");
-				System.out.println();
-				System.out.println("結果は『あいこ』です");
-				System.out.println();
-				System.out.println("もう一度挑戦してください");
+			if(input > 2 || input < 0) {
+				System.out.println("0～2の整数で入力してください。");
+				System.out.println("もう一度入力してください。");
+			}else if(input == enemy) {
+				System.out.println("あいこです。");
+				System.out.println("もう一度挑戦しましょう。");
+			}else {
+				if(input == 0 && enemy == 1 || input == 1 && enemy == 2 || input == 2 && enemy == 0) {
+					System.out.println("あなたの勝ちです。");
+					break;
+				}else {
+					System.out.println("あなたの負けです。");
+					break;
+				}
 			}
-			
-			
 		}
 	}
-
 }

@@ -10,24 +10,20 @@ public class Study12 {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		Random rand1 = new Random();
-		int num1 = 1;
+		int num1 = 0;
 		
 		System.out.println("‚¨‚İ‚­‚¶‚ğˆø‚«‚Ü‚·B");
 		System.out.println("ÀsƒL[‚ğ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢B");
+		System.out.println();
+		
+		String[] array = {"‘å‹g","’†‹g","¬‹g","‹g","‹¥"};
+		String text2 = "‘å‹g";
 		
 		while(true) {
-			String[] array = {"‘å‹g","’†‹g","¬‹g","‹g","‹¥"};
-			String text = array[rand1.nextInt(4)];
-			String text2 = "‘å‹g";	
-			
-			System.out.println();
-			
 			String input = scan.nextLine();
-			
+			String text = array[rand1.nextInt(4)];
 			System.out.println("‚ ‚È‚½‚ªˆø‚¢‚½‚Ì‚Í" + text + "‚Å‚·B");
-			
-			num1 += 1;
-			
+			num1 ++;
 			if(text != text2) {
 				System.out.println("‘å‹g‚ªo‚é‚Ü‚Åˆø‚¢‚Ä‚­‚¾‚³‚¢");
 				System.out.println("‚à‚¤ˆê“xˆø‚¢‚Ä‚­‚¾‚³‚¢B");

@@ -24,7 +24,7 @@ public class Study11 {
 		System.out.println();
 		
 		Random rand1 = new Random();
-		int num1 = rand1.nextInt(11);
+		int num1 = rand1.nextInt(10)+1;
 		System.out.println("Aの数字：" + "『" + num1 + "』");
 		Scanner scan = new Scanner(System.in);
 		
@@ -36,7 +36,7 @@ public class Study11 {
 			num2 = scan.nextInt();
 			
 			Random rand2 = new Random();
-			num3 = rand2.nextInt(11);
+			num3 = rand2.nextInt(10)+1;
 			
 			if (num2 > 2 || num2 < 0 ) {
 				System.out.println("1か2の数字で記入してください");
