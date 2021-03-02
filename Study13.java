@@ -20,30 +20,49 @@ public class Study13 {
 		
 		String[] hand = {"パー","グー","チョキ"};
 		
+		int input;
+		int enemy;
+		int count = 0;
+		
 		while(true) {
-			int input = scan.nextInt();
+			input = scan.nextInt();
 			String inputtext = hand[input];
-			int enemy = rand.nextInt(3);
+			enemy = rand.nextInt(3);
 			String enemytext = hand[enemy];
+			
 			System.out.println("あなたが出したのは" + inputtext + "です。");	
 			System.out.println("相手が出したのは" + enemytext + "です。");
 			
-			
-			if(input > 2 || input < 0) {
-				System.out.println("0～2の整数で入力してください。");
-				System.out.println("もう一度入力してください。");
-			}else if(input == enemy) {
+			if(input == enemy) {
+				count = 0;
 				System.out.println("あいこです。");
 				System.out.println("もう一度挑戦しましょう。");
 			}else {
 				if(input == 0 && enemy == 1 || input == 1 && enemy == 2 || input == 2 && enemy == 0) {
+					count++;
 					System.out.println("あなたの勝ちです。");
-					break;
+					if(count == 3) {
+						System.out.println("3回連続で勝利しました。");
+						System.out.println("おみくじを引けます。");
+						System.out.println("実行ボタンを押してください。");
+						
+						Scanner scan2 = new Scanner(System.in);
+						
+						String input2 = scan2.nextLine();
+						String[] kuji = {"大吉","中吉","小吉","吉","凶",};
+						String omikuji = kuji[rand.nextInt(4)];
+						System.out.println("あなたが引いたのは『" + omikuji + "』です。");
+						break;
+					}else {
+					System.out.println("もう一度挑戦しましょう。");
+					}
 				}else {
+					count = 0;
 					System.out.println("あなたの負けです。");
-					break;
+					System.out.println("もう一度挑戦しましょう。");
 				}
 			}
+		
 		}
 	}
 }
