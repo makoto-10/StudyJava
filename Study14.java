@@ -33,19 +33,22 @@ public class Study14 {
 			Scanner scan2 = new Scanner(System.in);
 			String answer = scan2.nextLine();
 			
+			
+			if(answer.isEmpty()) {
+				System.out.println("答えを入力してください");
+			}else if(answer.equals(targetTheme)) {
+				System.out.println("正解です。");
+				count++;
+			}else {
+				System.out.println("不正解です。");
+			}
+			
 			if(count == 5) {
 				System.out.println("5回正解しました。");
 				System.out.println("ゲームクリアです。");
 				break;
 			}else {
-				if(answer.isEmpty()) {
-					System.out.println("答えを入力してください");
-				}else if(answer.equals(targetTheme)) {
-					System.out.println("正解です。もう一度挑戦しましょう");
-					count++;
-				}else {
-					System.out.println("不正解です。もう一度挑戦しましょう。");
-				}
+				System.out.println("もう一度挑戦しましょう。");
 			}
 			
 		}
