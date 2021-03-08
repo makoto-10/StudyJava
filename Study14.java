@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 import java.util.Random;
 
+
 public class Study14 {
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,7 +16,7 @@ public class Study14 {
 		System.out.println("入力したら実行ボタンを押してください");
 		System.out.println("5回クリアするまでの時間を計測します");
 		System.out.println("スタートするには実行ボタンを押してください");
-		
+	
 		Scanner scan = new Scanner(System.in);
 		Random rand = new Random();
 		String[] theme = {"hokkaido","aomoriken","iwateken","miyagiken","akitaken","yamagataken","hukushimaken","ibarakiken","tochigiken","gummaken","saitamaken",
@@ -23,6 +25,9 @@ public class Study14 {
 				"kagawaken","ehimeken","kochiken","fukuokaken","sagaken","nagasakiken","kumamotoken","oitaken","miyazakiken","kagoshimaken","okinawaken"}; 
 		
 		String input = scan.nextLine();
+		long start = System.currentTimeMillis();
+		
+		double total = 0;
 		int count = 0;
 		
 		while(true) {
@@ -33,6 +38,8 @@ public class Study14 {
 			Scanner scan2 = new Scanner(System.in);
 			String answer = scan2.nextLine();
 			
+			int words = answer.length();
+			total = total + words;
 			
 			if(answer.isEmpty()) {
 				System.out.println("答えを入力してください");
@@ -46,10 +53,19 @@ public class Study14 {
 			if(count == 5) {
 				System.out.println("5回正解しました。");
 				System.out.println("ゲームクリアです。");
+				
+				long end = System.currentTimeMillis();
+				
+				System.out.println("クリアまでにかかった時間は" + ((end - start)/1000) + "秒です。");
+				System.out.println("入力した文字数は" + total + "文字です。");
+				double average = ((end - start)/1000)/total;
+				System.out.println("一文字あたりの入力時間は" + average + "秒です");
 				break;
 			}else {
 				System.out.println("もう一度挑戦しましょう。");
 			}
+			
+			
 			
 		}
 
