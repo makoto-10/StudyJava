@@ -11,5 +11,4 @@ public class Study15 {
 	public static int total(int a, int b) {
 		return a + b;
 	}
-
 }
