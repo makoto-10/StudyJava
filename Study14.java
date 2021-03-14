@@ -57,9 +57,9 @@ public class Study14 {
 				long end = System.currentTimeMillis();
 				
 				System.out.println("クリアまでにかかった時間は" + ((end - start)/1000) + "秒です。");
-				System.out.println("入力した文字数は" + total + "文字です。");
+				System.out.println("入力した文字数は" + String.format("%.0f" , total) + "文字です。");
 				double average = ((end - start)/1000)/total;
-				System.out.println("一文字あたりの入力時間は" + average + "秒です");
+				System.out.println("一文字あたりの入力時間は" + String.format("%.2f" , average) + "秒です");
 				break;
 			}else {
 				System.out.println("もう一度挑戦しましょう。");
