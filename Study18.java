@@ -8,13 +8,13 @@ public class Study18 {
 	}
 
 	public static void output(int num) {
-		int array = timesTablesAnswer(num);
+		int array = timesTablesArray(num);
 		System.out.println(array + "‚Ì’i‚Ì“š‚¦‚Í‰º‹L‚Å‚·");
 		String l = loop(array);
 		System.out.println(l);
 	}
 	
-	public static int timesTablesAnswer(int a) {
+	public static int timesTablesArray(int a) {
 		int array[] = {0,1,2,3,4,5,6,7,8,9};
 		return array[a];
 	}
