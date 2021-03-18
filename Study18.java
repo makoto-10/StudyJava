@@ -4,11 +4,7 @@ public class Study18 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		output(9);
-	}
-
-	public static void output(int num) {
-		int array = timesTablesArray(num);
+		int array = timesTablesArray(1);
 		System.out.println(array + "‚Ì’i‚Ì“š‚¦‚Í‰º‹L‚Å‚·");
 		String l = loop(array);
 		System.out.println(l);
