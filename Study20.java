@@ -31,13 +31,22 @@ public class Study20 {
 		//ソウルナンバー判定
 		if(num >= 10 && num != 11 && num != 22 && num != 33 && num != 44) {
 			int secondNum = 0;
-			while(num != 0) {
-				secondNum += num % 10;
-				num /= 10;
-			}
-			return secondNum;
-		}else {
-			return num;
+				while(num != 0) {
+					secondNum += num % 10;
+					num /= 10;
+				}
+				if(secondNum >= 10) {
+					int thirdNum = 0;
+						while(secondNum != 0) {
+							thirdNum += secondNum % 10;
+							secondNum /= 10;
+						}
+						return thirdNum;
+				}else {
+					return secondNum;
+				}
+			}else {
+				return num;
 		}
 		
 	}
